@@ -1,0 +1,76 @@
+/* Floating Menu Container */
+.menu-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+}
+
+/* Menu Button */
+.menu-button {
+    width: 30px;
+    aspect-ratio: 1/1;
+    background-color: #000000;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: #2c3c54;
+}
+
+.menu-button.active {
+    background-color: #e74c3c;
+    transform: rotate(45deg);
+    margin-top: 10px;
+    scale: 0.9;
+}
+
+/* Menu Items */
+.menu-items {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-items button {
+    width: 120px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu-items button:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-items button {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}

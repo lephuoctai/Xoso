@@ -1,5 +1,6 @@
 import './App.css'
 import LotteryChecker from './components/LotteryChecker'
+import FloatingMenu from './components/FloatingMenu'
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <footer className="app-footer">
         <p>© {new Date().getFullYear()} - Ứng dụng Dò Vé Số</p>
       </footer>
+      
+      <FloatingMenu /> 
     </div>
   )
 }
