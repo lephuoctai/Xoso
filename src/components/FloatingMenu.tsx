@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './FloatingMenu.css';
+import LotteryScanner from './MenuFuture/LotteryScanner';
 
 const FloatingMenu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [future, setFuture] = useState(0);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -12,35 +14,24 @@ const FloatingMenu: React.FC = () => {
         // Xử lý khi người dùng nhấp vào một mục menu
         console.log(`Đã nhấp vào mục menu ${itemNumber}`);
 
-        // Đóng menu sau khi người dùng chọn một mục
-        setIsOpen(false);
+        setFuture(itemNumber);
     };
-
-    const handleOutsideClick = (event: MouseEvent) => {
-        const target = event.target as HTMLElement;
-        if (!target.closest('.menu-container')) {
-            setIsOpen(false);
-        }
-    };
-
-    // Thêm sự kiện lắng nghe khi menu mở
-    if (isOpen) {
-        document.addEventListener('click', handleOutsideClick);
-    } else {
-        document.removeEventListener('click', handleOutsideClick);
-    }
 
     return (
         <div className="menu-container">
-
-
             {isOpen && (
-                <div className="menu-items">
-                    <button onClick={() => handleMenuItemClick(1)}>Tính năng 1</button>
-                    <button onClick={() => handleMenuItemClick(2)}>Tính năng 2</button>
-                    <button onClick={() => handleMenuItemClick(3)}>Tính năng 3</button>
+                <div className="nva">
+                    <div className="menu-items">
+                        <button onClick={() => handleMenuItemClick(1)}>Auto Scanner</button>
+                        <button onClick={() => handleMenuItemClick(2)}>Tính năng 2</button>
+                        <button onClick={() => handleMenuItemClick(3)}>Tính năng 3</button>
+                    </div>
+                    <div className="view"> 
+                        <LotteryScanner />
+                    </div>
                 </div>
-            )}<button
+            )}
+            <button
                 className={`menu-button ${isOpen ? 'active' : ''}`}
                 onClick={toggleMenu}
                 aria-label="Menu"
