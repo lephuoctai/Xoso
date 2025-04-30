@@ -17,6 +17,13 @@ const FloatingMenu: React.FC = () => {
         setFuture(itemNumber);
     };
 
+    var viewContent;
+    switch (future) {
+        case 1:
+            viewContent = <LotteryScanner />;
+            break;
+    }
+
     return (
         <div className="menu-container">
             {isOpen && (
@@ -27,7 +34,7 @@ const FloatingMenu: React.FC = () => {
                         <button onClick={() => handleMenuItemClick(3)}>Tính năng 3</button>
                     </div>
                     <div className="view"> 
-                        <LotteryScanner />
+                        {viewContent}
                     </div>
                 </div>
             )}
