@@ -11,13 +11,13 @@ function App() {
 
       <main>
         <LotteryChecker />
+        <FloatingMenu />
       </main>
 
       <footer className="app-footer">
         <p>© {new Date().getFullYear()} - Ứng dụng Dò Vé Số</p>
       </footer>
-      
-      <FloatingMenu /> 
+
     </div>
   )
 }
