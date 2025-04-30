@@ -207,8 +207,6 @@ const LotteryChecker = () => {
 
     return (
         <div className="lottery-checker">
-            <h2>Dò Vé Số Kiến Thiết</h2>
-
             <div className="form-group">
                 <label htmlFor="ticketNumber">Mã số vé (6 số):</label>
                 <input
