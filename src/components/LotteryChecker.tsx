@@ -45,7 +45,8 @@ const provinces: Province[] = [
     { id: 'bali', name: 'Bạc Liêu' },
     { id: 'angi', name: 'An Giang' },
     { id: 'cama', name: 'Cà Mau' },
-    { id: 'thth', name: 'Thừa Thiên Huế' }
+    { id: 'thth', name: 'Thừa Thiên Huế' },
+    { id: 'tani', name: 'Tây Ninh' }
 ];
 
 const LotteryChecker = () => {
